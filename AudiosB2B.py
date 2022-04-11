@@ -1,7 +1,7 @@
 import numpy as np
 from tkinter import *
 from tkinter import filedialog
-from PIL import ImageTk, Image
+from PIL import Image, ImageDraw, ImageFont
 import os
 
 root = Tk()
@@ -10,7 +10,10 @@ root.geometry("500x300")
 
 root.config(bg="#B0E0E6")
 
-# img = Image.open("fondo.jpg")
+img = Image.open("fondo.jpg")
+draw = ImageDraw.Draw(img)
+font = ImageFont.truetype("arial.ttf", 60)
+
 # img = img.resize((400,400))
 # img = ImageTk.PhotoImage(img)
 # fondo_label = Label(root, image= img)
